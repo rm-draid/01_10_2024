@@ -1,0 +1,41 @@
+// default : mobile bo'ladi
+
+@mixin mobile-large {
+  // 640px - 999px;
+  @media (min-width: 640px) {
+    @content;
+    .middle_part {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+    .btn {
+      margin-left: 35%;
+    }
+  }
+}
+
+@mixin tablet {
+  // 1000px - 1239px
+  @media (min-width: 1000px) {
+    @content;
+    .nimadur {
+      font-size: 46px;
+    }
+    .middle_part {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .nav__list {
+      gap: 30px;
+    }
+  }
+}
+
+@mixin desktop {
+  // 1240px --- .......
+  @media (min-width: 1240px) {
+    @content;
+  }
+}
